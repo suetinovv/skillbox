@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">room</string>
+    <string name="enter_word">Введите слово</string>
+    <string name="add">Добавить</string>
+    <string name="Clean">Очистить</string>
+    <string name="error">Слово может содержать только буквы и знак \"-\"</string>
+</resources>

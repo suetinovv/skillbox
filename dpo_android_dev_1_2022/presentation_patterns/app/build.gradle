@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.weather'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.weather"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "WATHER_ACCESS_KEY", "\"d8f9b1f9830c407488f83932230704\"")
+        }
+        debug {
+            buildConfigField("String", "WATHER_ACCESS_KEY", "\"d8f9b1f9830c407488f83932230704\"")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.moshi:moshi:1.14.0"
+    implementation 'androidx.test.ext:junit-ktx:1.1.5'
+    implementation 'androidx.test.espresso:espresso-contrib:3.5.1'
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:1.14.0"
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+
+    implementation 'androidx.room:room-ktx:2.5.1'
+    implementation 'androidx.room:room-runtime:2.5.1'
+    kapt 'androidx.room:room-compiler:2.5.1'
+    implementation 'androidx.room:room-rxjava2:2.5.1'
+    androidTestImplementation "androidx.room:room-testing:2.5.1"
+
+    implementation 'com.google.dagger:dagger:2.45'
+    kapt 'com.google.dagger:dagger-compiler:2.45'
+
+    testImplementation "io.mockk:mockk:1.12.0"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+    testImplementation "org.mockito:mockito-core:3.12.4"
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation "io.mockk:mockk-android:1.12.0"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.ext:junit-ktx:1.1.5'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test:core-ktx:1.5.0'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'androidx.fragment:fragment-testing:1.5.6'
+    androidTestImplementation "com.google.dagger:dagger:2.45"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:2.45"
+}

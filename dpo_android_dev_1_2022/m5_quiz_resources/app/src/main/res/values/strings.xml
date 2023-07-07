@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Favorite quiz</string>
+    <string name="next">Продолжить</string>
+    <string name="welcome_image">welcome_image</string>
+</resources>

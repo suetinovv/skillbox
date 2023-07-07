@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Таймер обратного отчета</string>
+    <string name="night_mode">Ночной режим</string>
+    <string name="start">Старт</string>
+    <string name="stop">Стоп</string>
+    <string name="time_finished">Время истекло</string>
+
+</resources>

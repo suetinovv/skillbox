@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Мой Unsplash</string>
+    <string name="title_photo">Фотографии</string>
+    <string name="title_collections">Коллекции</string>
+    <string name="title_user">Пользователь</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Войдите в систему или зарегистрируйтесь</string>
+    <string name="action_sign_in_short">Регистрироваться</string>
+    <string name="welcome">"Добро пожаловать!"</string>
+    <string name="invalid_username">Неверное имя пользователя</string>
+    <string name="invalid_password">Пароль должен содержать более 5 символов</string>
+    <string name="login_failed">"Ошибка входа"</string>
+
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+
+    <string name="text_1">Создавайте снимки, публикуйте, собирайте аудиторию, получайте фидбек!</string>
+    <string name="text_2">Делитесь с друзьями, собирайте коллекции</string>
+    <string name="text_3">Загружайте любимые снимки и отслеживайте статистику</string>
+    <string name="text_button">Начать</string>
+    <string name="log_in_via_unsplash">Войти через Unsplash</string>
+    <string name="photo">Фото</string>
+    <string name="loading_error">Ошибка загрузки</string>
+    <string name="update">Обновить</string>
+    <string name="text_error_load">Нет сети. Обновите страницу.</string>
+    <string name="liked">Понравилось</string>
+    <string name="made_with">Сделано с помощью: </string>
+    <string name="model">Модель: </string>
+    <string name="exposure">Экспозиция: </string>
+    <string name="aperture">Диафрагма: </string>
+    <string name="focal_length">Фокусное расстояние: </string>
+    <string name="iso">ISO: </string>
+    <string name="about">Информация о </string>
+    <string name="textDownload">Загружено</string>
+    <string name="textPhotos">Фотографий</string>
+    <string name="error_load_db">Ошибка сети: Будет загружена информация из БД</string>
+    <string name="success">Успех</string>
+    <string name="failure">Ошибка</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Unsplash</string>
+    <string name="title_photo">Photo</string>
+    <string name="title_collections">Collections</string>
+    <string name="title_user">User</string>
+    <string name="appAuthRedirectScheme" translatable="false">ru.nikalaich.oauth</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+
+    <string name="text_1">Create pictures, publish, gather an audience, get feedback!</string>
+    <string name="text_2">Share with friends, collect collections</string>
+    <string name="text_3">Upload your favorite pictures and track statistics</string>
+    <string name="text_button">Go</string>
+    <string name="log_in_via_unsplash">Log in via Unsplash</string>
+    <string name="photo">Photo</string>
+    <string name="loading_error">Loading error</string>
+    <string name="update">Update</string>
+    <string name="text_error_load">There is no network. Refresh the page.</string>
+    <string name="liked">Liked</string>
+    <string name="made_with">Made with: </string>
+    <string name="model">Model: </string>
+    <string name="exposure">Exposure: </string>
+    <string name="aperture">Aperture: </string>
+    <string name="focal_length">Focal length: </string>
+    <string name="iso">ISO: </string>
+    <string name="about">About </string>
+    <string name="textDownload">Download</string>
+    <string name="textPhotos">Photos</string>
+    <string name="error_load_db">Network error: Information from the database will be loaded</string>
+    <string name="success">SUCCESS</string>
+    <string name="failure">FAILURE</string>
+
+</resources>

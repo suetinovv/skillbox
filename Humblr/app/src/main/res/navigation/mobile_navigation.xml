@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.humblr.ui.home.HomeFragment"
+        android:label="@string/title_subreddits"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_subreddit"
+            app:destination="@id/navigation_subreddit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.example.humblr.ui.favorite.FavoriteFragment"
+        android:label="@string/title_favourites"
+        tools:layout="@layout/fragment_favorite">
+
+        <action
+            android:id="@+id/action_favorite_to_user_profile"
+            app:destination="@id/navigation_user_profile" />
+        <action
+            android:id="@+id/action_favorite_to_subreddit_post"
+            app:destination="@id/navigation_subreddit_post" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_my_profile"
+        android:name="com.example.humblr.ui.my_profile.MyProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_my_profile" >
+        <action
+            android:id="@+id/action_my_profile_to_user_profile"
+            app:destination="@id/navigation_user_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_subreddit"
+        android:name="com.example.humblr.ui.subreddit.SubredditFragment"
+        android:label="SubredditFragment">
+
+        <action
+            android:id="@+id/action_subreddit_to_subreddit_description"
+            app:destination="@id/navigation_subreddit_description" />
+        <action
+            android:id="@+id/action_subreddit_to_subreddit_post"
+            app:destination="@id/navigation_subreddit_post" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_subreddit_description"
+        android:name="com.example.humblr.ui.subreddit_description.SubredditDescriptionFragment"
+        android:label="subredditDescriptionFragment"
+        tools:layout="@layout/fragment_subreddit_description">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_subreddit_post"
+        android:name="com.example.humblr.ui.subreddit_post.SubredditPostFragment"
+        android:label="subredditPostFragment"
+        tools:layout="@layout/fragment_subreddit_post">
+        <action
+            android:id="@+id/action_subreddit_post_to_post_all_comments"
+            app:destination="@id/navigation_post_all_comments" />
+        <action
+            android:id="@+id/action_subreddit_post_to_user_profile"
+            app:destination="@id/navigation_user_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_post_all_comments"
+        android:name="com.example.humblr.ui.subreddit_post_all_comments.SubredditPostAllCommentsFragment"
+        android:label="SubredditPostAllCommentsFragment"
+        tools:layout="@layout/fragment_subreddit_post_all_comments" >
+        <action
+            android:id="@+id/action_ost_all_comments_to_user_profile"
+            app:destination="@id/navigation_user_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_user_profile"
+        android:name="com.example.humblr.ui.user_profile.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+
+
+</navigation>

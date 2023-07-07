@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="52dp"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    tools:context=".ui.home.HomeFragment">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search"
+        android:background="@drawable/my_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            app:chipSpacingHorizontal="35dp"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/newPosts"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="true"
+                android:text="@string/new_string"
+                android:textAlignment="center"
+                android:textColor="@drawable/chip_text_selector"
+                app:chipBackgroundColor="@drawable/chip_selector" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/popularIPosts"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/popular"
+                android:textAlignment="center"
+                android:textColor="@drawable/chip_text_selector"
+                app:chipBackgroundColor="@drawable/chip_selector"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintVertical_chainStyle="packed" />
+        </com.google.android.material.chip.ChipGroup>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <FrameLayout
+        android:id="@+id/mainProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="80dp"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/progressbar"
+            android:indeterminateTintMode="src_atop" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/bottomProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:listitem="@layout/subreddit_list_item" />
+
+
+    <ProgressBar
+        android:id="@+id/bottomProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+
+        android:indeterminate="true"
+        android:indeterminateTint="@color/progressbar"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/PhotoListFragment">
+
+    <fragment
+        android:id="@+id/PhotoListFragment"
+        android:name="com.example.permission.ui.PhotoListFragment"
+        android:label="@string/photo_list_fragment"
+        tools:layout="@layout/fragment_photo_list">
+
+        <action
+            android:id="@+id/action_PhotoListFragment_to_PhotoFullFragment"
+            app:destination="@id/PhotoFullFragment" />
+        <action
+            android:id="@+id/action_PhotoListFragment_to_CameraFragment"
+            app:destination="@id/CameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PhotoFullFragment"
+        android:name="com.example.permission.ui.PhotoFullFragment"
+        android:label="@string/photo_full_fragment"
+        tools:layout="@layout/fragment_photo_full">
+
+        <action
+            android:id="@+id/action_PhotoFullFragment_to_PhotoListFragment"
+            app:destination="@id/PhotoListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/CameraFragment"
+        android:name="com.example.permission.ui.CameraFragment"
+        android:label="@string/camera_fragment"
+        tools:layout="@layout/fragment_camera">
+
+        <action
+            android:id="@+id/action_CameraFragment_to_PhotoListFragment"
+            app:destination="@id/PhotoListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
